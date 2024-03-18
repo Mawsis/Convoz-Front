@@ -15,7 +15,6 @@ import { LoggedIn } from "../App";
 
 const Nav = () => {
   const [loggedIn, setLoggedIn] = useContext(LoggedIn);
-  console.log(loggedIn);
   return (
     <nav className=" w-[15%] h-full bg-green-600 flex flex-col justify-between items-center text-white">
       <h1 className="text-3xl h-[20%] flex justify-center items-center font-bold">

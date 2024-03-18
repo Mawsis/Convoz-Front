@@ -12,17 +12,9 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [loggedIn, setLoggedIn] = useContext(LoggedIn);
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get("/api/isLogged");
-        if (response.status === 202) {
-          navigate("/");
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchUserData();
+    if (loggedIn) {
+      navigate("/");
+    }
   }, []);
   const handleLogin = async (event) => {
     event.preventDefault();
